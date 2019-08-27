@@ -1,4 +1,4 @@
-'use strict'
+`use strict`
 const express = require("express");
 const http = require("http");
 const cookieParser = require("cookie-parser");
@@ -33,7 +33,11 @@ todoController(app);
 
 // routing here
 app.get('/', (req, res) => {
-	res.render("index", { title: 'Node Todo !!!' });
+	res.render("index", { title: 'Todo by JQuery and Node' });
+})
+
+app.get('/reacttodo', (req, res) => {
+	res.render("reacttodo", { title: 'Todo by React and Node'});
 })
 
 server.listen(port, () => {
